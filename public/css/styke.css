@@ -1,0 +1,129 @@
+.header{
+    background-image: linear-gradient(to right,
+        rgb(0 0 0 /.7),
+        rgb(0 0 0 /.7)),
+        url(../images/header.jpg);
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.navegacion{
+    position: relative;
+    z-index: 1;
+}
+
+.navegacion a{
+    color: white;
+}
+
+.navegacion a:hover{
+    background-color: rgb(137, 210, 29);
+}
+
+.color-yellow{
+    color: rgb(137, 210, 29);
+    font-weight: 900;
+}
+
+.bg-color-yellow{
+    font-weight: 600;
+
+    color: white;
+    background-color: rgb(137, 210, 29);
+}
+
+.bg-color-yellow:hover{
+    font-weight: 900;
+    color: white;
+    background-color: rgb(137, 210, 29);
+}
+
+.header-guitarra{
+    display: none;
+}
+
+.swal-footer{
+    text-align: center;
+}
+
+.swal-button:hover {
+    background-color: rgb(137, 210, 29);
+  }
+
+  .swal-button--confirm
+  {
+    background-color: rgb(137, 210, 29);
+  }
+@keyframes animation-header {
+    0%   {
+        opacity: 0;
+        transform: rotate(30deg);
+        filter: grayscale(70%);
+        transform: translateX(-15rem);
+    }
+    50%{
+        filter: grayscale(25%);
+        transform: translateX(5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: grayscale(0%);
+    }
+  }
+
+.lecciones{
+    background-image: linear-gradient(to right,
+        rgb(0 0 0 /.7),
+        rgb(0 0 0 /.17)),
+        url(../images/lecciones.jpg);
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.form-control:focus {
+    border-color: rgb(137, 210, 29);
+    box-shadow: 0 0 0 0.2rem rgb(137, 210, 29);
+  }
+
+.footerColor{
+    background-color: #2b162e;
+}
+
+.hasData{
+    outline: rgb(101, 208, 101) solid 2px;
+}
+.missingData{
+    outline: red solid 2px;
+}
+.emptyEmail {
+    outline: red dotted 5px;
+}
+.infoTable {
+    display:flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 780px) {
+    .header-guitarra {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 99%;
+
+      animation-duration: 5s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-name: animation-header;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    .header-guitarra {
+      padding-right: 50px;
+    }
+}
+
