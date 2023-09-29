@@ -7,10 +7,12 @@
         <div class="col-md-6 text-center text-md-start">
             <h1 class="display-5 fw-bold color-yellow"> Gretsch G5622T</h1>
             <p class="mt-3 fs-5 text-white">
-                El G5622T Electromatic® Center Block Double-Cut con Bigsby® presenta un cuerpo de arce de doble corte con un bloque central de abeto ahuecado para una resonancia dinámica, potencia de alta ganancia y comodidad ligera.
+                El G5622T Electromatic® Center Block Double-Cut con Bigsby® presenta un cuerpo de arce de doble corte
+                con un bloque central de abeto ahuecado para una resonancia dinámica, potencia de alta ganancia y
+                comodidad ligera.
             </p>
             <p class="text-primary fs-1  text-decoration-none text-white ">
-                <spam class="color-yellow"> $1500 IVA </spam>
+                <spam class="color-yellow"> $1500 IVA</spam>
             </p>
             <div class="">
                 <a href="#" class="btn fs-4 bg-color-yellow py-2 px-3">Aprovechar Oferta</a>
@@ -28,6 +30,20 @@
     <main class="container-xl mt-5">
         <h2 class="text-center color-yellow">Promociones</h2>
         <div class="row mt-3" id="zonaPromotions">
+            @foreach($promotionsProducts as $product)
+                <div class="col-md-6 col-lg-4 my-4 row align-items-center promotionProduct p-3">
+                    <div class='col-4'><img class='img-fluid' src='{{asset($product->img) }}' alt='{{$product->name}}'>
+                    </div>
+                    <div class="col-8">
+                        <h3 class="text-black fs-4 text-uppercase">{{$product->name}}</h3>
+                        <p>{{$product->description}}</p>
+                        <a class="fs-3 color-yellow fw-bold text-decoration-none">{{'$ ' . $product->price}}</a>
+                        <a data-product-id="{{$product->id}}"
+                           class="btn mt-4 d-block bg-color-yellow text-center p-1 text-uppercase seeProductInfo">Ver
+                            Producto</a>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </main>
 
@@ -37,9 +53,13 @@
                 <div class="col-md-6 text-center mt-5 mb-5">
                     <h2 class="text-center color-yellow">Academia Harmonics Music</h2>
                     <p class="mt-3 fs-5 text-white">
-                        Descubre el arte de la música en nuestra academia especializada. Atrévete a explorar nuevos ritmos y melodías mientras desarrollas tus habilidades musicales con nuestros talentosos profesores. Desde principiantes hasta músicos experimentados, todos son bienvenidos a embarcarse en un viaje musical único.
+                        Descubre el arte de la música en nuestra academia especializada. Atrévete a explorar nuevos
+                        ritmos y melodías mientras desarrollas tus habilidades musicales con nuestros talentosos
+                        profesores. Desde principiantes hasta músicos experimentados, todos son bienvenidos a embarcarse
+                        en un viaje musical único.
                     </p>
-                    <a href="{{ route('contactUs') }}" class="btn fs-4 bg-color-yellow py-2 px-3">Comunicate con Nostros</a>
+                    <a href="{{ route('contactUs') }}" class="btn fs-4 bg-color-yellow py-2 px-3">Comunicate con
+                        Nostros</a>
                 </div>
             </div>
         </div>
@@ -54,7 +74,8 @@
                     <div class="card-body">
                         <h3 class="text-center color-yellow">Curso de Guitarra</h3>
                         <p>
-                            En nuestro curso de guitarra, aprenderás una amplia variedad de habilidades y conocimientos que te permitirán convertirte en un guitarrista talentoso y versáti
+                            En nuestro curso de guitarra, aprenderás una amplia variedad de habilidades y conocimientos
+                            que te permitirán convertirte en un guitarrista talentoso y versáti
                         </p>
                     </div>
                 </div>
@@ -66,7 +87,8 @@
                     <div class="card-body">
                         <h3 class="text-center color-yellow">Curso de Solfeo</h3>
                         <p>
-                            En nuestro curso de solfeo, aprenderás fundamentos musicales esenciales que te permitirán leer, escribir y comprender la notación musical.
+                            En nuestro curso de solfeo, aprenderás fundamentos musicales esenciales que te permitirán
+                            leer, escribir y comprender la notación musical.
                         </p>
                     </div>
                 </div>
@@ -74,11 +96,13 @@
 
             <div class="col-md-6 col-lg-3">
                 <div class="card">
-                    <img class="card-img-top" src="{{asset('images/courses/canto.jpg') }}" style="height: 70%;" alt="clase de guitarra">
+                    <img class="card-img-top" src="{{asset('images/courses/canto.jpg') }}" style="height: 70%;"
+                         alt="clase de guitarra">
                     <div class="card-body">
                         <h3 class="text-center color-yellow">Curso de Canto</h3>
                         <p>
-                            En nuestro curso de canto, aprenderás una amplia variedad de técnicas y habilidades que te ayudarán a desarrollar y mejorar tu voz. convertirte en un cantante seguro
+                            En nuestro curso de canto, aprenderás una amplia variedad de técnicas y habilidades que te
+                            ayudarán a desarrollar y mejorar tu voz. convertirte en un cantante seguro
                         </p>
                     </div>
                 </div>
@@ -90,7 +114,8 @@
                     <div class="card-body">
                         <h3 class="text-center color-yellow">Curso de Bateria</h3>
                         <p>
-                            En nuestro curso de batería, aprenderás una amplia gama de técnicas y habilidades que te permitirán convertirte en un baterista talentoso y versátil.
+                            En nuestro curso de batería, aprenderás una amplia gama de técnicas y habilidades que te
+                            permitirán convertirte en un baterista talentoso y versátil.
                         </p>
                     </div>
                 </div>

@@ -20,13 +20,13 @@ class ProductFactory extends Factory
     public function definition()
     {
         $images = [
-            "img/promotions/bigsky.png",
-            "img/promotions/bajo-promo.webp",
-            "img/promotions/vox.png",
-            "img/promotions/vox2.jpg",
-            "img/promotions/cuerdas.jpg",
-            "img/promotions/clarinete.jpg",
-            "img/promotions/lira.jpg",
+            "images/promotions/bigsky.png",
+            "images/promotions/bajo-promo.webp",
+            "images/promotions/vox.png",
+            "images/promotions/vox2.jpg",
+            "images/promotions/cuerdas.jpg",
+            "images/promotions/clarinete.jpg",
+            "images/promotions/lira.jpg",
         ];
 
 
