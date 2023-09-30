@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LobbyController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,7 @@ Route::prefix('blog')->group(function () {
 });
 
 
-Route::get('/store', [LobbyController::class, 'store'])->name('store');
+Route::get('/store', [ProductController::class, 'storeIndex'])->name('store');
 
 
 Route::get('/contact-us', [LobbyController::class, 'contactUs'])->name('contactUs');;
