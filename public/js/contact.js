@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 
     $("#contactForm").submit(function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         var name = $("#inputNombre").val();
         var email = $("#inputEmail").val();
@@ -55,25 +55,9 @@ $(document).ready(function() {
             return;
         }
 
-        var dataInfo = document.createElement("div");
-        dataInfo.classList.add('infoTable');
-        dataInfo.innerHTML =  '<table><tr><td><strong>Nombre:</strong></td><td> ' + name + '</td></tr>' +
-                    '<tr><td><strong>Asunto:</strong></td><td> ' + asunto + '</td></tr>' +
-                    '<tr><td><strong>Email:</strong></td><td> ' + email + '</td></tr>' +
-                    '<tr><td><strong>Pais:</strong></td><td> ' + pais + '</td></tr>' +
-                    '<tr><td><strong>Detalle:</strong></td><td> ' + mensaje + '</td></tr></table>';
-
-        
-        swal({
-            title: "Datos Enviados!",
-            text: "Info",
-            content:dataInfo,
-            icon: "success",
-        });
-
-        $("#contactForm input, #contactForm textarea").val('');
-
+        this.submit();
     });
+
 
     function displayAlert(message) {
         $("#error-message").text(message);

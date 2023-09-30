@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LobbyController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/about', [LobbyController::class, 'about'])->name('about');;
 Route::get('/blog', [LobbyController::class, 'blog'])->name('blog');;
 Route::get('/store', [LobbyController::class, 'store'])->name('store');;
 Route::get('/contact-us', [LobbyController::class, 'contactUs'])->name('contactUs');;
+
+Route::post('/contact-us', [ContactUsController::class, 'submitForm'])->name('contactUs.request');;
