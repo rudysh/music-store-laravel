@@ -68,58 +68,19 @@
     <section class="container-xl mt-5">
         <h2 class="text-center color-yellow">Nuestros Cursos</h2>
         <div class="row mt-4">
-            <div class="col-md-6 col-lg-3">
+            @foreach($courses as $course)
+                <div class="col-md-6 col-lg-3">
                 <div class="card">
-                    <img class="card-img-top" src="{{asset('images/courses/te.jpeg') }}" alt="clase de guitarra">
+                    <img class="card-img-top" src="{{asset($course->img) }}" alt="clase de guitarra">
                     <div class="card-body">
-                        <h3 class="text-center color-yellow">Curso de Guitarra</h3>
+                        <h3 class="text-center color-yellow">{{$course->name}}</h3>
                         <p>
-                            En nuestro curso de guitarra, aprenderás una amplia variedad de habilidades y conocimientos
-                            que te permitirán convertirte en un guitarrista talentoso y versáti
+                            {{$course->description}}
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img class="card-img-top" src="{{asset('images/courses/solfeo.jpg') }}" alt="clase de guitarra">
-                    <div class="card-body">
-                        <h3 class="text-center color-yellow">Curso de Solfeo</h3>
-                        <p>
-                            En nuestro curso de solfeo, aprenderás fundamentos musicales esenciales que te permitirán
-                            leer, escribir y comprender la notación musical.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img class="card-img-top" src="{{asset('images/courses/canto.jpg') }}" style="height: 70%;"
-                         alt="clase de guitarra">
-                    <div class="card-body">
-                        <h3 class="text-center color-yellow">Curso de Canto</h3>
-                        <p>
-                            En nuestro curso de canto, aprenderás una amplia variedad de técnicas y habilidades que te
-                            ayudarán a desarrollar y mejorar tu voz. convertirte en un cantante seguro
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img class="card-img-top" src="{{asset('images/courses/bateria.jpg') }}" alt="clase de guitarra">
-                    <div class="card-body">
-                        <h3 class="text-center color-yellow">Curso de Bateria</h3>
-                        <p>
-                            En nuestro curso de batería, aprenderás una amplia gama de técnicas y habilidades que te
-                            permitirán convertirte en un baterista talentoso y versátil.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
 
     </section>
