@@ -20,11 +20,6 @@ class LobbyController extends Controller
         return view('about');
     }
 
-    public function blog()
-    {
-        return view('blog');
-    }
-
     public function contactUs()
     {
         return view('contactUs');

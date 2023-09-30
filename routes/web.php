@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LobbyController;
 use Illuminate\Support\Facades\Route;
@@ -17,8 +18,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LobbyController::class, 'index'])->name('index');;
 Route::get('/about', [LobbyController::class, 'about'])->name('about');;
-Route::get('/blog', [LobbyController::class, 'blog'])->name('blog');;
-Route::get('/store', [LobbyController::class, 'store'])->name('store');;
-Route::get('/contact-us', [LobbyController::class, 'contactUs'])->name('contactUs');;
 
+Route::prefix('blog')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('blog');
+    Route::get('/{id}', [BlogController::class, 'show'])->name('blog.show');
+});
+
+
+Route::get('/store', [LobbyController::class, 'store'])->name('store');
+
+
+Route::get('/contact-us', [LobbyController::class, 'contactUs'])->name('contactUs');;
 Route::post('/contact-us', [ContactUsController::class, 'submitForm'])->name('contactUs.request');;
