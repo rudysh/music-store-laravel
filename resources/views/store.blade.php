@@ -47,11 +47,14 @@
                         <p>{{$product->description}}</p>
                         <a class="fs-3 color-yellow fw-bold text-decoration-none">{{'$ ' . $product->price}}</a>
                         <a data-product-id="{{$product->id}}"
-                           class="btn mt-4 d-block bg-color-yellow text-center p-1 text-uppercase seeProductInfo">Agregar
+                           class="btn mt-4 d-block bg-color-yellow text-center p-1 text-uppercase addcart">Agregar
                             al carrito</a>
                     </div>
                 </div>
             @endforeach
+            <div class="justify-content-center">
+                {{ $products->links() }}
+            </div>
         </div>
     </main>
 @endsection

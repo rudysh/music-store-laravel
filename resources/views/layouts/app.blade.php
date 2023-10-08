@@ -23,6 +23,7 @@
                 <a href="{{ route('blog') }}" class="d-block px-2 p-1 text-decoration-none fs-6 fw-bold tezt-uppercase">Blog</a>
                 <a href="{{ route('store') }}" class="d-block px-2 p-1 text-decoration-none fs-6 fw-bold tezt-uppercase">Tienda</a>
                 <a href="{{ route('contactUs') }}" class="d-block px-2 p-1 text-decoration-none fs-6 fw-bold tezt-uppercase">Contacto</a>
+                <a href="{{ route('car') }}" class="d-block px-2 p-1 text-decoration-none fs-6 fw-bold tezt-uppercase">Carrito</a>
             </nav>
         </div>
         @yield('promotion-product')

@@ -29,7 +29,7 @@ class ProductController extends Controller
             $querySearch = $params['name'];
         }
 
-        $products = $productsQuery->get();
+        $products = $productsQuery->paginate();
         $categories = Category::all();
         return view('store', compact('products','categories','categorySelected','querySearch'));
     }

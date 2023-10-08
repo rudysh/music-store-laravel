@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LobbyController;
 use App\Http\Controllers\ProductController;
@@ -27,6 +28,12 @@ Route::prefix('blog')->group(function () {
 
 
 Route::get('/store', [ProductController::class, 'storeIndex'])->name('store');
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/car', [CartController::class, 'carIndex'])->name('car');
+    Route::get('/cart/{productId}', [CartController::class, 'add'])->name('product.api.find');
+});
+
 
 
 Route::get('/contact-us', [LobbyController::class, 'contactUs'])->name('contactUs');;
